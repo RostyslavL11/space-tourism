@@ -1,0 +1,148 @@
+/* Utility classes     */
+
+.flex {
+  display: flex;
+  gap: $gap;
+}
+
+.grid {
+  display: grid;
+  gap: $gap;
+}
+
+// .flow > *:not(:first-child)
+// .flow > * + * {
+//   margin-top: 1rem;
+//   outline: 1px solid red;
+// }
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+.container {
+  //better to use it's focused only on left and right
+  padding-inline: 0 2em;
+  margin-inline: auto;
+  min-width: 80rem;
+}
+
+//for a screen reader
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+/* colors */
+.bg-dark {
+  background-color: hsl($-clr-dark);
+}
+.bg-accent {
+  background-color: hsl($-clr-light);
+}
+.bg-white {
+  background-color: hsl($-clr-white);
+}
+.text-dark {
+  color: hsl($-clr-dark);
+}
+.text-accent {
+  color: hsl($-clr-light);
+}
+.text-white {
+  color: hsl($-clr-white);
+}
+
+/* typography */
+.ff-serif {
+  font-family: $-ff-serif;
+}
+.ff-sans-cond {
+  font-family: $-ff-sans-cond;
+}
+.ff-sans-normal {
+  font-family: $-ff-sans-normal;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fs-900 {
+  font-size: $-fs-900;
+}
+.fs-800 {
+  font-size: $-fs-800;
+}
+.fs-700 {
+  font-size: $-fs-700;
+}
+.fs-600 {
+  font-size: $-fs-600;
+}
+.fs-500 {
+  font-size: $-fs-500;
+}
+.fs-400 {
+  font-size: $-fs-400;
+}
+.fs-300 {
+  font-size: $-fs-300;
+}
+.fs-200 {
+  font-size: $-fs-200;
+}
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+  line-height: 1.1;
+}
+
+.numbered-title {
+  font-family: $-ff-sans-cond;
+  font-size: $-fs-500;
+  text-transform: uppercase;
+  letter-spacing: 4.72px;
+
+  span {
+    margin-right: 0.5em;
+    font-weight: 700;
+    color: rgba($-clr-white-rgb, 0.25);
+  }
+}
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+.large-button {
+  display: grid;
+  place-items: center;
+  padding: 0 2em;
+  aspect-ratio: 1;
+  text-decoration: none;
+  border-radius: 50%;
+
+  :hover {
+    outline: 20px;
+    outline-color: rgba($-clr-white-rgb, 0.25);
+  }
+}
