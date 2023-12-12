@@ -57,7 +57,7 @@
   color: hsl($-clr-light);
 }
 .text-white {
-  color: hsl($-clr-white);
+  color: $-clr-white-rgb;
 }
 
 /* typography */
@@ -134,6 +134,8 @@
 /* Compontents         */
 /* ------------------- */
 .large-button {
+  position: relative;
+  z-index: 1;
   display: grid;
   place-items: center;
   padding: 0 2em;
@@ -141,8 +143,69 @@
   text-decoration: none;
   border-radius: 50%;
 
-  :hover {
-    outline: 20px;
-    outline-color: rgba($-clr-white-rgb, 0.25);
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: rgba($-clr-white-rgb, 0.25);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity 500ms linear, transform 500ms ease-in-out;
   }
+
+  &:hover,
+  &:focus {
+    &:after {
+      opacity: 1;
+
+      transform: scale(1.5);
+    }
+  }
+}
+
+.primary-navigation {
+  gap: 8rem;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+
+    span {
+      font-weight: 700;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.underline-indicators {
+  & > * {
+    cursor: pointer;
+    padding: 15px 0;
+    border: 0;
+    border-bottom: 0.2rem solid rgba($-clr-white-rgb, 0);
+  }
+
+  & > * {
+    &:hover,
+    &:focus {
+      border-color: rgba($-clr-white-rgb, 0.5);
+    }
+  }
+
+  & > .active {
+    border-color: rgba($-clr-white-rgb, 1);
+  }
+
+  & > [aria-selected="true"] {
+    color: rgba($-clr-white-rgb, 1);
+    border-color: rgba($-clr-white-rgb, 1);
+  }
+}
+
+.tab-list {
+  gap: 2.5rem;
 }
