@@ -1,10 +1,15 @@
 @media (min-width: 35em) {
   :root {
-    --fs-900: 9.375rem;
     --fs-800: 5rem;
     --fs-700: 2.5rem;
     --fs-600: 1.5rem;
     --fs-400: 1rem;
+  }
+}
+
+@media (max-width: 1090px) {
+  :root {
+    --fs-900: 5.375rem;
   }
 }
 
@@ -21,9 +26,9 @@
 @media (min-width: 45em) {
   .grid-container {
     column-gap: 2rem;
-
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
-        2rem,
+    text-align: left;
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(
+        1rem,
         1fr
       );
 
