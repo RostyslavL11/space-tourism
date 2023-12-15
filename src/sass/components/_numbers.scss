@@ -1,0 +1,29 @@
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+.numbers {
+  flex-direction: column;
+  width: 80px;
+  & > * {
+    cursor: pointer;
+    font-size: 32px;
+    font-family: var(--ff-serif);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    border: 2px solid hsl(var(--clr-white) / 0.25);
+    background-color: hsl(var(--clr-white) / 1);
+    transition: border-color 500ms ease-in-out;
+    color: var(--clr-white);
+
+    &:hover,
+    &:focus {
+      border-color: hsl(var(--clr-white) / 0.5);
+    }
+  }
+
+  & > [aria-selected="true"] {
+    background-color: hsl(var(--clr-white) / 1);
+    color: var(--clr-white);
+  }
+}
