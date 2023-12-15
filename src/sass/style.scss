@@ -4,11 +4,15 @@
 @import "libs/reset";
 @import "libs/clases";
 
+@import "components/typography";
+@import "components/colors";
 @import "components/buttons";
 @import "components/navigation";
 @import "components/underline-indicators";
 @import "components/dots-indicators";
 @import "components/tabs";
 @import "components/numbers";
+
+@import "blocks/home";
 
 @import "base/media";
