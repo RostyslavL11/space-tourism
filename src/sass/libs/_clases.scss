@@ -26,12 +26,10 @@
 
 .grid-container {
   padding-inline: 1rem;
-
   text-align: center;
-  border: 5px solid limegreen;
   display: grid;
   place-items: center;
-
+  row-gap: 10%;
   * {
     max-width: 50ch;
   }
@@ -178,26 +176,6 @@
   }
 }
 
-.primary-navigation {
-  // --gap: 8rem;
-  // --underline-gap: 2rem;
-  align-items: center;
-  gap: 52px;
-  height: 96px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-  a {
-    text-decoration: none;
-
-    span {
-      font-weight: 700;
-      margin-right: 0.5em;
-    }
-  }
-}
-
 .underline-indicators {
   & > * {
     cursor: pointer;
@@ -271,4 +249,18 @@
     background-color: hsl(var(--clr-white) / 1);
     color: var(--clr-white);
   }
+}
+
+/* ----------------------------- */
+/* Page specific background      */
+/* ----------------------------- */
+
+/* home */
+body {
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.home {
+  background-image: url("../img/home/background-home-mobile.jpg");
 }

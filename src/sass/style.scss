@@ -1,7 +1,10 @@
 @import "base/variables";
 @import "base/mixins";
 
-@import "libs/reset.scss";
+@import "libs/reset";
 @import "libs/clases";
+@import "libs/buttons";
+
+@import "blocks/navigation";
 
 @import "base/media";
