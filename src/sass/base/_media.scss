@@ -30,6 +30,11 @@
     margin: 0;
     flex-direction: column;
     transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
+
+    &[data-visible="true"] {
+      transform: translateX(0);
+    }
 
     &.underline-indicators {
       & > .active {
@@ -48,10 +53,19 @@
     border: 0;
     background-image: url("../icons/shared/icon-hamburger.svg");
     background-repeat: no-repeat;
+    background-position: center;
 
     width: 1.5rem;
-
     aspect-ratio: 1;
+
+    &[aria-expanded="true"] {
+      background-image: url("../icons/shared/icon-close.svg");
+    }
+
+    &:focus-visible {
+      outline: 5px solid red;
+      outline-offset: 5px;
+    }
   }
 }
 
