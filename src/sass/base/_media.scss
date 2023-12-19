@@ -13,6 +13,16 @@
   }
 }
 
+@media (min-width: 35em) and (max-width: 44.999em) {
+  .primary-navigation {
+    a {
+      & > span {
+        display: none;
+      }
+    }
+  }
+}
+
 @media (max-width: 1090px) {
   :root {
     --fs-900: 5.375rem;
@@ -69,6 +79,35 @@
   }
 }
 
+$minPadding: 3rem;
+$maxPadding: 7rem;
+$viewportPadding: 8vw;
+
+@media (min-width: 35em) {
+  .primary-header {
+    &::after {
+      content: "";
+      display: block;
+      position: relative;
+      height: 1px;
+      width: 100%;
+      margin-right: -2.5rem;
+
+      background: hsl(var(--clr-white) / 0.25);
+      order: 1;
+    }
+  }
+
+  nav {
+    order: 2;
+  }
+
+  .primary-navigation {
+    padding-inline: $minPadding;
+    padding-inline: max($minPadding, min($maxPadding, $viewportPadding));
+  }
+}
+
 @media (min-width: 45em) {
   :root {
     /* font-sizes */
@@ -102,5 +141,9 @@
 
   .home {
     background-image: url("../img/home/background-home-desktop.jpg");
+  }
+
+  .primary-navigation {
+    margin-block: 2rem;
   }
 }

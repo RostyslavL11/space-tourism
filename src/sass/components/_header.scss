@@ -1,0 +1,13 @@
+$minSize: 1.5rem;
+$maxSize: 3.5rem;
+$viewportSize: 5vw;
+
+.logo {
+  margin: $minSize;
+  margin: max($minSize, min($viewportSize, $maxSize));
+}
+
+.primary-header {
+  justify-content: space-between;
+  align-items: center;
+}

@@ -48,17 +48,20 @@
   border: 0;
 }
 
-/* colors */
+.skip-to-content {
+  position: absolute;
+  transform: translateY(-110%);
+  z-index: 9999;
+  background: hsl(var(--clr-white));
+  color: hsl(var(--clr-dark));
+  padding: 0.5em 1em;
+  margin-inline: auto;
+  transition: all 1s ease-in-out;
 
-/* typography */
-
-/* ------------------- */
-/* Compontents         */
-/* ------------------- */
-
-/* ----------------------------- */
-/* Page specific background      */
-/* ----------------------------- */
+  &:focus {
+    transform: translateY(0);
+  }
+}
 
 /* home */
 body {
