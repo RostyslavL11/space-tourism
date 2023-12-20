@@ -27,11 +27,23 @@
   border-top: 1px solid hsl(var(--clr-white) / 0.1);
   padding-top: 2.5rem;
   margin-top: 2.5rem;
+
+  p {
+    font-size: 1.75rem;
+    outline: 3px solid limegreen;
+  }
 }
 
 @media (min-width: 35em) {
   .destination-meta {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+}
+@media (min-width: 45em) {
+  .destination-meta {
+    gap: min(8vw, 6rem);
+
+    justify-content: start;
   }
 }
