@@ -24,17 +24,6 @@
   max-width: 80rem;
 }
 
-.grid-container {
-  padding-inline: 1rem;
-  text-align: center;
-  display: grid;
-  place-items: center;
-  row-gap: 10%;
-  * {
-    max-width: 50ch;
-  }
-}
-
 //for a screen reader
 .sr-only {
   position: absolute;
@@ -61,10 +50,4 @@
   &:focus {
     transform: translateY(0);
   }
-}
-
-/* home */
-body {
-  background-size: cover;
-  background-position: bottom center;
 }
