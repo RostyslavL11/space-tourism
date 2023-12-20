@@ -30,7 +30,6 @@
 
   p {
     font-size: 1.75rem;
-    outline: 3px solid limegreen;
   }
 }
 
@@ -43,7 +42,6 @@
 @media (min-width: 45em) {
   .destination-meta {
     gap: min(8vw, 6rem);
-
     justify-content: start;
   }
 }
