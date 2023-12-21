@@ -16,3 +16,6 @@ navToggle.addEventListener("click", () => {
 	console.log(navToggle.getAttribute('aria-expanded'));
 
 })
+
+//// tabs 
+const tabList = document.querySelector
