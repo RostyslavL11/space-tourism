@@ -11,12 +11,6 @@ $viewportPadding: 8vw;
 
     --fs-400: 1rem;
   }
-
-  .home {
-    background-position: center center;
-    background-image: url("../img/home/background-home-tablet.jpg");
-  }
-
   .primary-header {
     &::after {
       content: "";
@@ -115,10 +109,6 @@ $viewportPadding: 8vw;
     --fs-600: 2rem;
     --fs-500: 1.75rem;
     --fs-400: 1.125rem;
-  }
-
-  .home {
-    background-image: url("../img/home/background-home-desktop.jpg");
   }
 
   .primary-navigation {

@@ -23,6 +23,10 @@
   p:not([class]) {
     max-width: 50ch;
   }
+
+  &--crew {
+    padding-bottom: 0;
+  }
 }
 
 @media (min-width: 45em) {
@@ -57,7 +61,7 @@
       ". image tabs ."
       ". image content .";
 
-    & > img {
+    & > picture {
       max-width: 90%;
     }
   }

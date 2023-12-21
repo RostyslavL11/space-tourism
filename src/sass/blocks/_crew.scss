@@ -1,3 +1,25 @@
+.crew {
+  background-image: url("../img/crew/background-crew-mobile.jpg");
+  &-details {
+    h2 {
+      color: hsl(var(--clr-white) / 0.5);
+    }
+  }
+}
+
+@media (min-width: 35rem) {
+  .crew {
+    background-position: center center;
+    background-image: url("../img/crew/background-crew-tablet.jpg");
+  }
+}
+
+@media (min-width: 45rem) {
+  .crew {
+    background-image: url("../img/crew/background-crew-desktop.jpg");
+  }
+}
+
 .grid-container {
   &--crew {
     --flow-space: 2rem;
@@ -7,13 +29,13 @@
       "tabs"
       "content";
 
-    & > img {
+    & > picture {
       grid-area: image;
       max-width: 60%;
       border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
     }
 
-    & > .dot-list {
+    & > .dot-indicators {
       grid-area: tabs;
     }
     & > .crew-details {
@@ -30,6 +52,25 @@
         "content"
         "tabs"
         "image";
+    }
+  }
+}
+@media (min-width: 45em) {
+  .grid-container {
+    &--crew {
+      grid-template-areas:
+        ". title title ."
+        ". content image ."
+        ". tabs image .";
+
+      & > picture {
+        max-width: 90%;
+        // align-self: end;
+      }
+
+      .dot-indicators {
+        justify-self: start;
+      }
     }
   }
 }
