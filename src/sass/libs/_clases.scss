@@ -59,3 +59,7 @@
     transform: translateY(0);
   }
 }
+
+[role="tab"]:focus {
+  color: limegreen !important;
+}
