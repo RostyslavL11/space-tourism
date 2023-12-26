@@ -66,18 +66,42 @@ function changeTabPanel(e) {
 	const tabContainer = targetTab.parentNode;
 	const mainContainer = tabContainer.parentNode;
 
-	mainContainer
-		.querySelectorAll('[role="tabpanel"]')
-		.forEach((panel) => panel.setAttribute("hidden", true));
+	tabContainer
+		.querySelector('[aria-selected="true"]')
+		.setAttribute("aria-selected", false);
 
-	mainContainer.querySelector([`#${targetPanel}`]).removeAttribute('hidden');
+	targetTab.setAttribute("aria-selected", true);
 
-	mainContainer
-		.querySelectorAll('picture')
-		.forEach((picture) => picture.classList.add("hidden")); // Додайте клас "hidden" для приховання всіх картинок
+	hideContent(mainContainer, '[role="tabpanel"]');
+	showContent(mainContainer, [`#${targetPanel}`]);
+
+	hidePicture(mainContainer, 'picture');
+	showPicture(mainContainer, `#${targetImage}`);
+
+}
 
 
-	mainContainer.querySelector(`#${targetImage}`).classList.remove('hidden'); // Показати вибрану картинку
+function hideContent(parent, content) {
+	parent
+		.querySelectorAll(content)
+		.forEach((item) => item.setAttribute("hidden", true));
+}
 
-	// console.log(mainContainer);
+function showContent(parent, content) {
+	parent
+		.querySelector(content)
+		.removeAttribute('hidden');
+}
+
+
+function hidePicture(parent, content) {
+	parent
+		.querySelectorAll(content)
+		.forEach((item) => item.classList.add("hidden"));
+}
+
+function showPicture(parent, content) {
+	parent
+		.querySelector(content)
+		.classList.remove('hidden');
 }
